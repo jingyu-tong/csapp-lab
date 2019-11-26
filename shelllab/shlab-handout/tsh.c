@@ -407,7 +407,7 @@ void sigtstp_handler(int sig)
         if(job->state == ST){ //已经停止，直接返回
             return;
         }else{
-            kill(-pid,SIGTSTP); //发送SIGINT到进程组
+            kill(-pid,SIGTSTP); //发送SIGTSTP到进程组
         }
     }
     return;
